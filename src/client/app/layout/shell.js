@@ -5,9 +5,9 @@
         .module('app.layout')
         .controller('Shell', Shell);
 
-    Shell.$inject = ['$timeout', 'config', 'logger'];
+    Shell.$inject = ['$timeout', 'config', 'logger', '$scope', '$location'];
 
-    function Shell($timeout, config, logger) {
+    function Shell($timeout, config, logger, $scope, $location) {
         /*jshint validthis: true */
         var vm = this;
 
@@ -17,6 +17,9 @@
         vm.showSplash = true;
 
         activate();
+      
+
+        $scope.isActive =function(viewLocation){return $location.path().indexOf(viewLocation) == 0;};
 
         function activate() {
             logger.success(config.appTitle + ' loaded!', null);

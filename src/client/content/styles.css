@@ -1,4 +1,4 @@
-﻿/*#region Override background color theme */
+/*#region Override background color theme */
 
 /*For Bootstrap 3*/
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
@@ -204,7 +204,6 @@ small {
 }
 
 .navbar .navbar-brand {
-    background: url(../content/images/icon.png) no-repeat left top !important;
     margin: 0 1em;
 }
 

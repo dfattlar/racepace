@@ -12,8 +12,8 @@
     }
 
     var config = {
-        appErrorPrefix: '[HotTowel Error] ', //Configure the exceptionHandler decorator
-        appTitle: 'HotTowel Angular Demo',
+        appErrorPrefix: '[Error] ', //Configure the exceptionHandler decorator
+        appTitle: 'Drew Fattlar',
         version: '3.0.0'
     };
 
@@ -30,7 +30,7 @@
 
         // Configure the common route provider
         routehelperConfigProvider.config.$routeProvider = $routeProvider;
-        routehelperConfigProvider.config.docTitle = 'HotTowel-Angular: ';
+        routehelperConfigProvider.config.docTitle = 'Drew Fattlar: ';
 
         // Configure the common exception handler
         exceptionConfigProvider.config.appErrorPrefix = config.appErrorPrefix;

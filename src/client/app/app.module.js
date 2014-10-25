@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     angular.module('app', [
@@ -22,6 +22,8 @@
          */
         'app.admin',
         'app.dashboard',
+        'app.main',
+        'app.tom',
         'app.layout'
     ]);
 
