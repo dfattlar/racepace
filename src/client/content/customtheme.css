@@ -11,6 +11,8 @@
     /*font-weight: 400;*/
 }
 
+.nav-margin {margin-top: 100px;}
+
 .navbar {
   margin-bottom: 0px;
   background:rgba(255,255,255,0.95);
@@ -149,10 +151,14 @@ h2 {
 }
 .arrows img {
   height: 32px;
-
-
 <!-- END Slider styles -->
+  
+  
+<!-- Run Plan styles -->
+.input-group.race-form.ng-scope {margin: 60px;}
+<!-- END Run Plan styles -->
 
+<!--   
 .btn, .badge, .modal, .modal-dialog, .modal-content,
 input, select {
     -ms-border-radius: 0 !important;
@@ -167,6 +173,7 @@ input, select {
 
 
 form * {
+    margin-top: 60px;  
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 

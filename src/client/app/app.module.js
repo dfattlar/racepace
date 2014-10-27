@@ -24,6 +24,7 @@
         'app.dashboard',
         'app.main',
         'app.tom',
+        'app.race-plan',
         'app.layout'
     ]);
 
