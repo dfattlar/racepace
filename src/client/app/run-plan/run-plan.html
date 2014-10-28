@@ -15,7 +15,7 @@
         <label for='date'>Date</label>
         <input type="date" class="form-control" ng-model="vm.race.date" /><br />
         <label for='race'>Selected Run</label>
-        <select class='form-control' ng-model='vm.selectedRace' ng-options='race.name for race in vm.form.races' ng-init = 'vm.selectedRace = vm.form.races[0]' >  
+        <select class='form-control' ng-model='vm.selectedRace' ng-options='race.name for race in vm.form.races'>  
         </select>
         </br>
         <label for='time'>Time (hh/mm/ss)</label>
