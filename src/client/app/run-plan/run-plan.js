@@ -115,7 +115,6 @@
         vm.form = {};
         vm.form.races = races;
 
-        */
         function activate() {
             logger.info('Activated Run Plan View');
         }
