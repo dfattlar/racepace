@@ -147,7 +147,14 @@ h2 {
 h4 {
     font-family: 'Josefin Slab';
     font-size: 2em;
+    font-weight: bold;
     color: #333;
+}
+
+.well-p {
+  font-family: 'Josefin Slab';
+  font-weight: 300;
+  font-size: 1.6em;
 }
 
 .about_link{
@@ -216,6 +223,7 @@ h4 {
 .mile-notes{
   margin-top: 15px;
 }
+
 
 /* END Run Plan styles */
 
