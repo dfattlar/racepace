@@ -13,15 +13,15 @@
         <label for='name'>Run Name</label>
         <input type="text" class="form-control" placeholder="Run Name" ng-model="vm.race.name" /><br />
         <label for='date'>Date</label>
-        <input type="date" class="form-control" ng-model="vm.race.date" /><br />
+        <input type="Date" class="form-control" ng-model="vm.race.date" /><br />
         <label for='race'>Selected Run</label>
         <select class='form-control' ng-model='vm.selectedRace' ng-options='race.name for race in vm.form.races'>  
         </select>
         </br>
         <label for='time'>Time (hh/mm/ss)</label>
-        <input type='number' ng-model='vm.pace.hh' name='hours' placeholder='hour' min="0" max="100"/>
-        <input type='number' ng-model='vm.pace.mm' name='minutes' placeholder='minutes' min="0" max="60"/>
-        <input type='number' ng-model='vm.pace.ss' name='seconds' placeholder='seconds' min="0" max="60"/>
+        <input type='number' ng-model='vm.pace.hh' name='hours' placeholder='hour' min="0" max="100" class='pace-input'/>
+        <input type='number' ng-model='vm.pace.mm' name='minutes' placeholder='minutes' min="0" max="60" class='pace-input'/>
+        <input type='number' ng-model='vm.pace.ss' name='seconds' placeholder='seconds' min="0" max="60" class='pace-input'/>
         </br>
         <label for='notes'>Run Notes</label>
         <div ng-repeat="rows in vm.selectedRace.rows track by rows.mile">
