@@ -1,0 +1,48 @@
+<div class='container nav-margin container-top container-bottom run-plan'>
+  <div class='col-md-6 hidden-print'>
+    <div class='input-group'>
+      <form novalidate class="simple-form" name='RunPlan'>
+        <label for='name'>Run Name</label>
+        <input type="text" class="form-control" placeholder="Run Name" ng-model="vm.race.name" /><br />
+        <label for='date'>Date</label>
+        <input type="date" class="form-control" ng-model="vm.race.date" /><br />
+        <label for='race'>Selected Run</label>
+        <select class='form-control' ng-model='vm.selectedRace' ng-options='race.name for race in vm.form.races' ng-init = 'vm.selectedRace = vm.form.races[0]' >  
+        </select>
+        </br>
+        <label for='time'>Time (hh/mm/ss)</label>
+        <input type='number' ng-model='vm.pace.hh' name='hours' placeholder='hour' min="0" max="100"/>
+        <input type='number' ng-model='vm.pace.mm' name='minutes' placeholder='minutes' min="0" max="60"/>
+        <input type='number' ng-model='vm.pace.ss' name='seconds' placeholder='seconds' min="0" max="60"/>
+        </br>
+        <label for='notes'>Run Notes</label>
+        <div ng-repeat="rows in vm.selectedRace.rows track by rows.mile">
+          <input type="text" class="form-control mile-notes" ng-model="rows.note" placeholder='Note for Mile {{rows.mile}}' />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class='col-md-6'>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="btn pull-right hidden-print">
+          <a href="#" onclick="window.print();return false;" class="btn btn-default btn-sm run-print"><span class="glyphicon glyphicon-print"></span> Print</a>
+        </div>
+        <h3 class="panel-title">
+          {{vm.race.name}} - {{vm.race.date | date}} | {{vm.selectedRace.name}} Run Goal -- {{vm.pace.hh}}:{{vm.pace.mm}}:{{vm.pace.ss}}
+        </h3>
+      </div>
+      <div class="panel-body">
+         <table class="table table-striped">
+          <th>Mile</th>
+          <th>Notes</th>
+          <tr ng-repeat="mile in vm.selectedRace.rows">
+            <td>{{mile.mile}}</td>
+            <td>{{mile.note}}</td>
+          </tr> 
+        </table>
+      </div>
+      <div class="panel-footer">Run Plan</div>
+    </div>
+  </div>
+</div>

@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app.admin')
+        .module('app.run-plan')
         .run(appRun);
 
     appRun.$inject = ['routehelper'];
@@ -15,15 +15,15 @@
     function getRoutes() {
         return [
             {
-                url: '/admin',
+                url: '/run-plan',
                 config: {
-                    title: 'admin',
-                    controller: 'Admin',
+                    title: 'Run Plan',
+                    controller: 'RunPlan',
                     controllerAs: 'vm',
-                    templateUrl: 'app/admin/admin.html',
+                    templateUrl: 'app/run-plan/run-plan.html',
                     settings: {
-                        nav: 2,
-                        content: '<i class="fa fa-lock"></i> Admin'
+                        nav: 5,
+                        content: '<i class="fa fa-lock"></i> Run Plan'
                     }
                 }
             }

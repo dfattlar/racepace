@@ -15,7 +15,7 @@
     function getRoutes() {
         return [
             {
-                url: '/',
+                url: '/main',
                 config: {
                     title: 'main',
                     controller: 'Main',

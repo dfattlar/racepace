@@ -6,10 +6,10 @@
 
     angular
         .module('app.widgets')
-        .directive('slider', ccSlider);
+        .directive('slider', Slider);
         
         /* @ngInject */
-        function ccSlider($timeout) {
+        function Slider($timeout) {
           // Display Image slider.
           // Usage:
           //  <div data-cc-slider>

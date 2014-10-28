@@ -18,10 +18,10 @@
             src: 'img1.png',
             title: 'Pic 1'
           }, {
-            src: 'img2.jpg',
+            src: 'img2.png',
             title: 'Pic 2'
           }, {
-            src: 'img3.jpg',
+            src: 'img3.png',
             title: 'Pic 3'
           }, {
             src: 'img4.png',

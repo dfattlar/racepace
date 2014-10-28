@@ -20,11 +20,9 @@
         /*
          * Feature areas
          */
-        'app.admin',
-        'app.dashboard',
         'app.main',
         'app.tom',
-        'app.race-plan',
+        'app.run-plan',
         'app.layout'
     ]);
 
