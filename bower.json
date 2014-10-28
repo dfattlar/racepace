@@ -1,12 +1,12 @@
 {
-    "name": "hottowel-ng",
+    "name": "mysite",
     "version": "3.0.0",
-    "description": "HotTowel Angular",
+    "description": "Drew Fattlar: MySite",
     "authors": [
-        "John Papa"
+        "Drew Fattlar"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/johnpapa/hottowel-ng",
+    "homepage": "https://github.com/dfattlar/mysite",
     "ignore": [
         "**/.*",
         "node_modules",
