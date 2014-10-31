@@ -10,23 +10,18 @@
     -webkit-font-smoothing: antialiased;
     /*font-weight: 400;*/
 }
-
+/* General Styles  --------------------------------------------------*/
 .nav-margin {margin-top: 100px;}
-
 .navbar {
   margin-bottom: 0px;
   background:rgba(255,255,255,0.95);
   
 }
-
 .navbar li { color: #000 } 
-
 .navbar-brand {padding: 10px 5px 10px 20px;}
-
 .navbar-fixed-top {
     min-height: 80px;
 }
-
 .navbar-nav > li > a {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -34,46 +29,36 @@
   font-family: 'Josefin Slab';
   font-size: 1.5em;
 }
-
 .navbar-default .navbar-nav>.active>a {
   background-color: transparent;
   border-bottom: 3px solid #428bca
 }
-
 @media (max-width: 767px) {
   .navbar-nav > li > a {
     line-height: 20px;
     padding-top: 10px;
     padding-bottom: 10px;}
-    
   .navbar-toggle {
     margin-top: 22px;
   }
-  
   .navbar-collapse{
     margin-top: 18px;
   }
 }
-
 footer{
   background-color: #5f5858;
 }
-
 footer .navbar-default, footer .navbar {background-color: transparent; border-color: transparent;}
-
 footer p {color: #979697;
   font-size: 1.5em;
   line-height: 200%;
   font-family: 'Helvetica Neue';
   font-weight:300;
 }
-
 .logo{height: 60px;}
-
 /* Move content down so it is visible under the header */
 .container-top{margin-top: 100px;}
 .container-bottom{margin-bottom: 40px;}
-
 .jumbotron {
   background-color: #b0b0b0;
   margin: 80px 0 0 0;
@@ -93,23 +78,19 @@ footer p {color: #979697;
   color: #fff;
   font-family: 'Josefin Slab';
 }
-
 @media (max-width: 767px){
   .jumbotron h1 {
     padding-top: 80px;
   }
 }
-
 .color0 {
     background-color: #5f5858;
     height: 25px;
 } 
-
 .color1 {
     background-color: #333;
     height: 50px;
 } 
-
 .dfImage {
     margin-top: 40px;
     width: 300px;
@@ -117,53 +98,45 @@ footer p {color: #979697;
     box-shadow: 0px 0px 5px #333;
     border-radius: 50%;
 }
-
 .about-section {
   padding: 80px 0 40px 0;
 }
-
 .about-section p {
   font-size: 1.5em;
   line-height: 200%;
   font-family: 'Josefin Slab';
 }
-
 .secondP {
   margin-top: 0px;
 }
-
 .about-list > li {
     font-size: 1.5em;
     line-height: 200%;
     font-family: 'Josefin Slab';
 }
-
 h2 {
     font-family: 'Josefin Slab';
     font-size: 3em;
     color: #333;
 }
-
 h4 {
     font-family: 'Josefin Slab';
     font-size: 2em;
     font-weight: bold;
     color: #333;
 }
-
 .well-p {
   font-family: 'Josefin Slab';
   font-weight: 300;
   font-size: 1.6em;
 }
-
 .about_link{
   font-family: 'Josefin Slab';
   font-weight: bold;
   text-decoration: none;
 }
 
-/* Slider styles */
+/* Slider --------------------------------------------------*/
 .slide.ng-hide-add,
 .slide.ng-hide-remove {
   -webkit-transition: all linear 0.5s;
@@ -180,7 +153,6 @@ h4 {
 .slide.ng-hide-remove.ng-hide-remove-active {
   opacity: 1;
 }
-
 .slider {
   position: relative;
   padding: 5px;
@@ -195,7 +167,6 @@ h4 {
   left: 0;
   box-shadow: 0px 0px 15px #999;
 }
-
 .arrows {
   position: absolute;
   top: 10px;
@@ -204,10 +175,8 @@ h4 {
 .arrows img {
   height: 32px;
 }
-/*END Slider styles */
 
-/*Run Plan styles */
-
+/* Run Plan Styles  --------------------------------------------------*/
 .run-print{
   margin: -18px -20px 0 0 !important;
   background-color: transparent;
@@ -219,15 +188,23 @@ h4 {
   font-size: 1.3em;
   padding-top: 10px;
 }
-
-.mile-notes{
+.form-spacing{
   margin-top: 15px;
 }
-
+.col-buffer-left{
+  margin: 0 6px 15px 15px;
+  width: 45%
+}
+.col-buffer-right{
+  margin: 0 6px 15px 6px;
+  width: 45%
+}
+.panel-heading-height{
+  min-height: 38px;
+}
 .pace-input{
   width: 62px;
 }
 
-/* END Run Plan styles */
 
 

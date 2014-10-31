@@ -45,6 +45,16 @@
               ]
             },
             {
+              name:'6k',
+              distance: 3.72823,
+              rows:[ 
+                {mile: '1', note:''},
+                {mile: '2', note:''},
+                {mile: '3', note:''},
+                {mile: '3.7', note:''}
+              ]
+            },
+            {
               name:'8k',
               distance: 4.97097,
               rows:[ 

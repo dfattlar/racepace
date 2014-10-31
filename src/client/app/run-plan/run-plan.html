@@ -25,23 +25,32 @@
         </br>
         <label for='notes'>Run Notes</label>
         <div ng-repeat="rows in vm.selectedRace.rows track by rows.mile">
-          <input type="text" class="form-control mile-notes" ng-model="rows.note" placeholder='Note for Mile {{rows.mile}}' />
+          <input type="text" class="form-control form-spacing" ng-model="rows.note" placeholder='Note for Mile {{rows.mile}}' />
         </div>
       </form>
     </div>
   </div>
   <div class='col-md-6'>
     <div class="panel panel-primary">
-      <div class="panel-heading">
+      <div class="panel-heading panel-heading-height">
         <div class="btn pull-right hidden-print">
           <a href="#" onclick="window.print();return false;" class="btn btn-default btn-sm run-print"><span class="glyphicon glyphicon-print"></span> Print</a>
         </div>
         <h3 class="panel-title">
-          {{vm.race.name}} - {{vm.race.date | date}} | {{vm.selectedRace.name}} Run Goal -- {{vm.pace.hh}}:{{vm.pace.mm}}:{{vm.pace.ss}}
+          {{vm.race.name}} 
+          <span ng-show='vm.race.date > 0'>- {{vm.race.date | date}}</span>
         </h3>
       </div>
       <div class="panel-body">
-         <table class="table table-striped">
+        <div class="row">
+          <div class="alert alert-info col-md-6 col-buffer-left text-center" role="alert">
+            <strong>Run Pace:</strong> {{vm.pace.minpermile}}
+          </div>
+          <div class="alert alert-info col-md-6 col-buffer-right text-center" role="alert">
+            <strong>{{vm.selectedRace.name}} Goal Time:</strong> {{vm.pace.hh}}:{{vm.pace.mm}}:{{vm.pace.ss}}
+          </div>
+        </div>
+        <table class="table table-striped">
           <th>Mile</th>
           <th>Notes</th>
           <tr ng-repeat="mile in vm.selectedRace.rows">
