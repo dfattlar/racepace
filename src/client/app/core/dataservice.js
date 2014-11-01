@@ -36,7 +36,7 @@
           var races = [
             {
               name:'5k',
-              distance: 3.10686,
+              distance: {imperial: 3.10686, metric: 5},
               rows:[ 
                 {mile: '1', note:''},
                 {mile: '2', note:''},
@@ -46,7 +46,7 @@
             },
             {
               name:'6k',
-              distance: 3.72823,
+              distance: {imperial: 3.72823, metric: 6},
               rows:[ 
                 {mile: '1', note:''},
                 {mile: '2', note:''},
@@ -56,7 +56,7 @@
             },
             {
               name:'8k',
-              distance: 4.97097,
+              distance: {imperial: 4.97097, metric: 8},
               rows:[ 
                 {mile: '1', note:''},
                 {mile: '2', note:''},
@@ -67,7 +67,7 @@
             },
             {
               name:'10k',
-              distance: 6.21371,
+              distance: {imperial: 6.21371, metric: 10},
               rows: [ 
                 {mile: '1', note:''},
                 {mile: '2', note:''},
@@ -80,7 +80,7 @@
             },
             {
               name:'Half Marathon',
-              distance: 13.10938,
+              distance: {imperial: 13.10938, metric: 21.09749},
               rows: [ 
                 {mile: '1', note:''},
                 {mile: '2', note:''},
@@ -100,7 +100,7 @@
             },
             {
               name:'Marathon',
-              distance: 26.21875,
+              distance: {imperial: 26.21875, metric: 42.19499},
               rows: [ 
                 {mile: '1', note:''},
                 {mile: '2', note:''},
