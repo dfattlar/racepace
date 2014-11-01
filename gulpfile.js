@@ -1,11 +1,20 @@
 /* jshint camelcase:false */
 var gulp = require('gulp');
+var deploy = require('gulp-gh-pages');
 var pkg = require('./package.json');
 var plug = require('gulp-load-plugins')();
 var env = plug.util.env;
 var log = plug.util.log;
 
 gulp.task('help', plug.taskListing);
+
+/**
+ * @desc Deploy to GitHub Pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./src/**/*")
+    .pipe(deploy())
+});
 
 /**
  * @desc Lint the code
