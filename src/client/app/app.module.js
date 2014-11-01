@@ -23,6 +23,7 @@
         'app.main',
         'app.tom',
         'app.run-plan',
+        'app.voice',
         'app.layout'
     ]);
 
