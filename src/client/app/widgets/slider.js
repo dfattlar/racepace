@@ -12,7 +12,7 @@
         function Slider($timeout) {
           // Display Image slider.
           // Usage:
-          //  <div data-cc-slider>
+          //  <slider>
           var directive = {
             restrict: 'AE',
             replace: true,
