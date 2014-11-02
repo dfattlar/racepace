@@ -206,5 +206,7 @@ h4 {
   width: 62px;
 }
 
+/* Voice Styles  --------------------------------------------------*/
 
+.done{text-decoration: line-through; color: #ccc;}
 

@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class='row'>
+      <div class='col-md-1'></div>
+      <div class='col-md-11'>
+        <p>{{vm.text}}</p>
+        <h1>Voice</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <form name="form" ng-submit="vm.addTodo()">
+    <input type="text" name="newtodo" ng-model="vm.newTodo" required/>
+    <button ng-disabled="form.$invalid">Go</button>
+  </form>
+  <button ng-click="vm.clearCompleted()">Clear Completed</button>
+  <ul>
+    <li ng-repeat="todo in vm.todos">
+      <input type="checkbox" ng-model="todo.done" />{{$index+1}}
+      <span ng-class="{'done':todo.done}">{{todo.title}}</span>
+    </li>
+  </ul>
+  <p>yes</p>
+  <timer interval="1000" countdown="100">{{countdown}}</timer>
+</div>
+<div class='color0'></div>
+<div class='color1'></div>
