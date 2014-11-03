@@ -18,13 +18,13 @@
           mm: 0,
           ss: 0,
           // figure out pace - mins per mile
-          total: function(hh, mm, ss, distance, conversion){
+          total: function(hh, mm, ss, distance, unit){
             var totalSS,
                 outputMM,
                 outputSS,
                 length;
             
-            length = (conversion === 'Kilometer' ? distance.metric : distance.imperial);
+            length = (unit === 'Kilometer' ? distance.metric : distance.imperial);
             
             totalSS = ((hh * 3600) + (mm * 60) + parseInt(ss)) / length;
             outputMM = Math.floor(totalSS / 60);
@@ -38,7 +38,7 @@
         };
         vm.form = {};
         vm.form.races = [];
-        vm.form.conversions = ['Mile','Kilometer'];
+        vm.form.units = ['Mile','Kilometer'];
       
         activate();
         
@@ -49,7 +49,7 @@
               }
               console.log( "$watch: hour changed." );
               vm.pace.hh = newValue;
-              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.conversion);
+              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.unit);
             });
       
         
@@ -59,7 +59,7 @@
               }
               console.log( "$watch: minutes changed." );
               vm.pace.mm = newValue;
-              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.conversion);
+              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.unit);
             });
             $scope.$watch("vm.pace.ss", function( newValue, oldValue ) {
               if ( newValue === oldValue ) {
@@ -67,7 +67,7 @@
               }
               console.log( "$watch: seconds changed." );
               vm.pace.ss = newValue;
-              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.conversion);
+              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.unit);
             });
             $scope.$watch("vm.selectedRace", function( newValue, oldValue ) {
               if ( newValue === oldValue ) {
@@ -75,15 +75,15 @@
               }
               console.log( "$watch: selected race changed." );
               vm.selectedRace = newValue;
-              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.conversion);
+              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.unit);
             });
-            $scope.$watch("vm.form.conversion", function( newValue, oldValue ) {
+            $scope.$watch("vm.form.unit", function( newValue, oldValue ) {
               if ( newValue === oldValue ) {
                   return;
               }
-              console.log( "$watch: conversion changed." );
-              vm.form.conversion = newValue;
-              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.conversion);
+              console.log( "$watch: unit changed." );
+              vm.form.unit = newValue;
+              vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.unit);
             });
       
         function activate() {
@@ -97,8 +97,8 @@
             return dataservice.getRunTypes().then(function (data) {
                 vm.form.races = data;
                 vm.selectedRace = data[0];
-                vm.form.conversion = vm.form.conversions[0];
-                vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.conversion);
+                vm.form.unit = vm.form.units[0];
+                vm.pace.minPer = vm.pace.total(vm.pace.hh, vm.pace.mm, vm.pace.ss, vm.selectedRace.distance, vm.form.unit);
                 return vm.form.races;
             });
         }
