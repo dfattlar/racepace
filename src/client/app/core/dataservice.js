@@ -48,7 +48,7 @@
           var races = [
             {
               name:'5k',
-              distance: {imperial: 3.10686, metric: 5},
+              distance: {imperial: 3.10686, metric: 5}, //change to Mile & Kilometer when buildRows working
               rows:[ 
                 {mile: '1', note:''},
                 {mile: '2', note:''},
