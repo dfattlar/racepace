@@ -32,6 +32,18 @@
             return $q.when(people);
         }
       
+        function buildRows(distance){
+          var i,
+              rows = Math.floor(distance),
+              output = [];
+          for(i = 1; i <=distance; i += 1){
+            output.push({interval: i, note: ''});
+          }
+          if(distance !== rows){
+            output.push({interval: distance, notes: ''});
+          }
+        }
+      
         function getRunTypes(){
           var races = [
             {
