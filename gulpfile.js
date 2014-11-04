@@ -12,7 +12,7 @@ gulp.task('help', plug.taskListing);
  * @desc Deploy to GitHub Pages
  */
 gulp.task('deploy', function () {
-  return gulp.src("./src/**/*")
+  return gulp.src("./app/**/*")
     .pipe(deploy())
 });
 
