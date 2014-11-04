@@ -23,7 +23,9 @@
         <input type='number' ng-model='vm.pace.mm' name='minutes' placeholder='minutes' min="0" max="60" class='pace-input'/>
         <input type='number' ng-model='vm.pace.ss' name='seconds' placeholder='seconds' min="0" max="60" class='pace-input'/>
         </br>
-        <select  type='form-control' ng-model='vm.form.conversion' ng-options='conversion for conversion in vm.form.conversions'></select>
+        <label for="unit">Unit of Measure</label>
+        <select  class='form-control' ng-model='vm.form.conversion' ng-options='conversion for conversion in vm.form.conversions'></select>
+        </br>
         <label for='notes'>Run Notes</label>
         <div ng-repeat="rows in vm.selectedRace.rows track by rows.mile">
           <input type="text" class="form-control form-spacing" ng-model="rows.note" placeholder='Note for Mile {{rows.mile}}' />
