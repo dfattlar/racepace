@@ -25,6 +25,7 @@
         </br>
         <label for='unit'>Unit of Measure</label>
         <select  class='form-control' ng-model='vm.form.unit' ng-options='unit for unit in vm.form.units'></select>
+        </br>
         <label for='notes'>Run Notes</label>
         <div ng-repeat="rows in vm.selectedRace.rows track by rows.mile">
           <input type="text" class="form-control form-spacing" ng-model="rows.note" placeholder='Note for Mile {{rows.mile}}' />
