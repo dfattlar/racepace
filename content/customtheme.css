@@ -1,0 +1,177 @@
+* {
+    /*-webkit-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+    box-shadow: none !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
+    -webkit-text-shadow: none !important;
+    -ms-text-shadow: none !important;
+    text-shadow: none !important;*/
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /*font-weight: 400;*/
+}
+/* General Styles  --------------------------------------------------*/
+
+footer{
+  background-color: #5f5858;
+}
+footer .navbar-default, footer .navbar {background-color: transparent; border-color: transparent;}
+footer p {color: #979697;
+  font-size: 1.5em;
+  line-height: 200%;
+  font-family: 'Helvetica Neue';
+  font-weight:300;
+}
+.logo{height: 60px;}
+/* Move content down so it is visible under the header */
+.container-top{margin-top: 100px;}
+.container-bottom{margin-bottom: 40px;}
+.jumbotron {
+  background-color: #b0b0b0;
+  margin: 80px 0 0 0;
+  height: 500px;
+}
+.jumbotron h1 {
+  margin-bottom: 10px;
+  font-family: 'Abril Fatface';
+  font-weight: 400;
+  font-size: 7.5em;
+  color: #fff;
+  padding-top: 200px;
+}
+.jumbotron p {
+  font-size: 30px; 
+  margin-top: 10px;
+  color: #fff;
+  font-family: 'Josefin Slab';
+}
+@media (max-width: 767px){
+  .jumbotron h1 {
+    padding-top: 80px;
+  }
+}
+.color0 {
+    background-color: #5f5858;
+    height: 25px;
+} 
+.color1 {
+    background-color: #333;
+    height: 50px;
+} 
+.dfImage {
+    margin-top: 40px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 5px #333;
+    border-radius: 50%;
+}
+.about-section {
+  padding: 80px 0 40px 0;
+}
+.about-section p {
+  font-size: 1.5em;
+  line-height: 200%;
+  font-family: 'Josefin Slab';
+}
+.secondP {
+  margin-top: 0px;
+}
+.about-list > li {
+    font-size: 1.5em;
+    line-height: 200%;
+    font-family: 'Josefin Slab';
+}
+h2 {
+    font-family: 'Josefin Slab';
+    font-size: 3em;
+    color: #333;
+}
+h4 {
+    font-family: 'Josefin Slab';
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+.well-p {
+  font-family: 'Josefin Slab';
+  font-weight: 300;
+  font-size: 1.6em;
+}
+.about_link{
+  font-family: 'Josefin Slab';
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Slider --------------------------------------------------*/
+.slide.ng-hide-add,
+.slide.ng-hide-remove {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+  display: block!important;
+}
+.slide.ng-hide-add.ng-hide-add-active,
+.slide.ng-hide-remove {
+  opacity: 0;
+}
+.slide.ng-hide-add,
+.slide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+.slider {
+  position: relative;
+  padding: 5px;
+  width: 610px;
+  height: 440px;
+  margin: auto;
+  margin-top: 170px;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 15px #999;
+}
+.arrows {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.arrows img {
+  height: 32px;
+}
+
+/* Run Plan Styles  --------------------------------------------------*/
+.run-print{
+  margin: -18px -20px 0 0 !important;
+  background-color: transparent;
+  color: #fff;
+}
+.run-plan label{
+  font-family:Helvetica Neue;
+  font-weight: 300;
+  font-size: 1.3em;
+  padding-top: 10px;
+}
+.form-spacing{
+  margin-top: 15px;
+}
+.col-buffer-left{
+  margin: 0 6px 15px 15px;
+  width: 45%
+}
+.col-buffer-right{
+  margin: 0 6px 15px 6px;
+  width: 45%
+}
+.panel-heading-height{
+  min-height: 38px;
+}
+.pace-input{
+  width: 62px;
+}
+
+
+
