@@ -49,8 +49,7 @@
           </div>
           <div class="alert alert-info col-md-6 col-buffer-right text-center" role="alert">
             <strong>{{vm.selectedRace.name}} Goal Time:</strong> 
-            <span ng-show='vm.pace.hh > 1'>{{vm.pace.hh}}:</span>
-            {{vm.pace.mm}}:{{vm.pace.ss}}
+            <span ng-show='vm.pace.hh >= 1'>{{vm.pace.hh}}:</span><span ng-show='vm.pace.hh > 0 && vm.pace.mm < 10'>0</span>{{vm.pace.mm}}:<span ng-show='vm.pace.ss < 10'>0</span>{{vm.pace.ss}}
           </div>
         </div>
         <table class="table table-striped">
